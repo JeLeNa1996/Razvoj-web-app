@@ -1,0 +1,415 @@
+@import (reference) "bootstrap.less";
+@color: #ff4d4d;
+@color-hover: lighten(@color, 20%);
+@padding: 0px;
+@margin: 0px;
+@font: 'ABeeZee';
+
+*{
+  margin:@margin;
+  padding:@padding;
+}
+
+.container1{
+	.container;
+	padding-right: @padding;
+    padding-left: @padding;
+	background-color: @color;
+}
+.container2{
+	padding-right: 40px;
+    padding-left: 40px;
+	padding-top: 10px;
+    padding-bottom: @padding;
+	background-color:white;
+}
+.container3{
+	.container1;
+	background-color:white;
+}
+.navbar{
+	.navbar;
+	padding: @padding;
+}
+.row {
+	h1{
+	display:block;
+	float:none;
+	font-family: 'Alfa Slab One';
+	font-size: 25px;
+	color:#660000;
+	}
+	
+	img{
+	width:45px;
+	height:70px;
+	}
+}
+ul{
+    list-style-type: none;
+    margin: @margin;
+    padding: @padding;
+    overflow: hidden;
+    background-color: @color;
+	font-family: @font;
+    font-size: 18px;
+
+		li {
+			float: left;
+			
+			a{
+				display: block;
+				color:black;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				background-color: @color;
+				font-family: @font;
+				font-size: 18px;
+				
+					&:hover{
+						background-color: @color-hover;
+						font-style:italic;
+							}
+				}
+			}
+}
+
+.slk{
+	position:center;
+	picture{
+		img{
+			width: 100%;
+			height: 500px;
+		}
+		figcaption{
+			text-align: center;
+		}
+		mark{
+			background-color:@color;
+			color:white;
+			}
+	}
+}
+
+.sekcija{
+	margin-top:50px;
+	text-align: center;
+		h2{
+			font-family: @font;
+			margin-bottom:20px;
+			font-size:40px;
+			}
+		p{
+			font-family: @font;
+			border: 2px solid gray;
+			border-radius: 25px;
+			margin-left:20%;
+			margin-right:20%;
+			padding:10px 10px 10px 10px;
+			text-align: justify;
+			background-color:white;
+		}
+}
+
+hr{
+	margin-left:20%;
+	margin-right:20%;
+	border-width:2px;
+}
+.sekcija1{
+	margin-top:50px;
+	text-align: center;
+		h2{
+			margin-bottom:20px;
+			font-size:40px;
+			font-family: @font;
+		}
+		figure{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 12px;
+			margin-left: 60px;
+			margin-right: 60px;
+				
+				img{
+					width: 350px;
+					height: 200px;
+					border: 2px solid gray;
+					border-radius: 25px;
+					padding:10px 10px 10px 10px;
+					margin-bottom:10px;
+					margin-top:10px;
+					}
+				}
+}
+
+.sekcija2{
+	margin-top:50px;
+	text-align: center;
+	border: 2px solid gray;
+    border-radius: 25px;
+	margin-left:20%;
+	margin-right:20%;
+	padding:10px 10px 10px 10px;
+	text-align: justify;
+	background-color: white;
+		h2{
+			margin-bottom:20px;
+			margin-left:35%;
+			font-size:40px;
+			background-color: white;
+			font-family: @font;
+			}
+			form{
+				font-family: @font;
+				background-color: white;
+				margin-left:30%;
+				margin-right:20%;
+					
+					.text{
+						background-color: white;
+						border-radius: 10px;
+						width:300px;
+						height:30px;
+						border:2px solid #ff1a1a;
+							}			
+					.select{
+						border:1px solid @color;
+						background-color: white;
+							}
+					.textarea{
+						border:2px solid @color;
+						background-color: white;
+						border-radius: 10px;
+					}	
+					.button{
+						width:40%;
+						height:50px;
+						font-size:20px;
+						margin:2% 5% 0 0%;
+						background:#669933;
+						border:1px solid #0E6E5B;
+						color:white;
+						box-shadow:0 0 20px 0 green;
+						-webkit-transition: width 2s; 
+						transition: width 2s;
+	
+							&:hover{
+								width:70%;
+									}
+							}		
+			}
+}
+
+
+footer{
+	background-color: @color;
+	padding: 15px;
+	text-align: center;
+
+		address{
+			background-color: @color;
+			}
+		a{
+			background-color: @color;
+			font-size:20px;
+			color: white;
+		}
+}
+@media screen and(max-width: 610px) {
+	
+	.slk picture img {
+		width: 100%;
+		height: 190px;
+	}
+	.sekcija2 
+	{
+		h2{
+		font-size:40px;
+		margin-left:@margin;
+	}
+	form{
+		margin-left:@margin;
+		margin-right:@margin;	
+	
+			.text{
+				width:300px;
+				height:25px;
+				}
+			.textarea{
+				width:300px;
+				}
+	
+			.button{
+				width:40%;
+				height:40px;
+				font-size:14px;
+					}
+		}
+	}
+}
+@media screen and(max-width: 400px) {
+	header{
+		.navbar{
+			li{
+				a{
+			font-size:14px;
+				}
+			}
+		}
+		.container2{
+			padding-left:5px;
+		}
+		.row{
+			h1{
+				font-size:20px;
+			}
+		}
+		
+	}
+	.slk {
+		picture{
+			img {
+				width: 100%;
+				height: 190px;
+				}
+		}
+	}
+	.sekcija {
+		p{
+			margin-left:10%;
+			margin-right:10%;
+			padding:8px 8px 8px 8px;
+			text-align: justify;
+		}
+	}
+	.sekcija1 {
+		figure {
+			display: flex;
+			padding: 5px;
+			margin-left: 20px;
+			margin-right: 20px;
+				img{
+					width: 200px;
+					height: 160px;
+					padding:5px;
+					margin-bottom:5px;
+					margin-top:5px;
+					}
+				}
+	}
+	.sekcija2{
+		h2{
+		font-size:25px;
+		margin-left:@margin;
+		}
+		form{
+			margin-left:@margin;
+			margin-right:@margin;	
+	
+				.text{
+				width:130px;
+				height:25px;
+				}
+				.textarea{
+				width:130px;
+				}
+				.button{
+				width:70%;
+				height:40px;
+				font-size:14px;
+				}
+			}
+	}
+}
+@media screen and(max-width: 130px) {
+	header{
+		.navbar{
+			li{
+				a{
+			font-size:14px;
+				}
+			}
+		}
+		.container2{
+			padding-left:5px;
+		}
+		.row{
+			h1{
+				font-size:15px;
+				}
+			}
+	}
+	.slk {
+		picture{
+			img {
+				width: 100%;
+				height: 57px;
+				}
+		}
+	}
+	.sekcija{
+		h2{
+			margin-bottom:10px;
+			font-size:20px;
+			}
+	}
+	.sekcija{
+			p{
+				margin-left:5%;
+				margin-right:5%;
+				padding:8px 8px 8px 8px;
+				text-align: justify;
+				font-size:12px;
+			}
+	}
+	.sekcija1 {
+		h2{
+			font-family: arial;
+			margin-bottom:10px;
+			font-size:20px;
+		}
+	}
+	.sekcija1 { 
+		figure{
+			display: flex;
+			padding: 5px;
+			margin-left: @margin;
+			margin-right: @margin;
+			img{
+				width: 80px;
+				height: 60px;
+				padding:5px;
+				margin-bottom:5px;
+				margin-top:5px;
+				}
+			}
+	}
+	.sekcija2{
+		margin-left:5px;
+		margin-right: 5px;
+			h2{
+				font-size:15px;
+				margin-left:@margin;
+				}
+			form{
+				margin-left:@margin;
+				margin-right:@margin;	
+					
+					.text{
+						width:75px;
+						height:20px;
+						}
+					.textarea{
+					width:75px;
+						}
+					.button{
+					width:80px;
+					height:30px;
+					font-size:14px;
+						}
+				}
+			}
+}
